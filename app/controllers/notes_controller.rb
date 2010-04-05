@@ -37,6 +37,10 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
   end
 
+  def new_preview
+    @note = Note.new(params[:note])
+  end
+  
   # POST /notes
   # POST /notes.xml
   def create

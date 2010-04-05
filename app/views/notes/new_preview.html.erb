@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @note.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @note.description %>
+</p>
+
+<% form_for(@note) do |f| %>
+  <%= f.hidden_field :title, :value => @note.title %>
+  <%= f.hidden_field :description, :value => @note.description %>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+

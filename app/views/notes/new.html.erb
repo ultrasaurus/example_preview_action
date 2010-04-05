@@ -1,6 +1,6 @@
 <h1>New note</h1>
 
-<% form_for(@note) do |f| %>
+<% form_for(:note, :url => { :action => "new_preview" } ) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -12,7 +12,7 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Preview' %>
   </p>
 <% end %>
 
