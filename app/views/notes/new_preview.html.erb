@@ -12,6 +12,7 @@
   <%= f.hidden_field :title, :value => @note.title %>
   <%= f.hidden_field :description, :value => @note.description %>
   <p>
+    <%= f.submit 'Re-Edit', :onclick => "this.form.action='new'" %>
     <%= f.submit 'Create' %>
   </p>
 <% end %>

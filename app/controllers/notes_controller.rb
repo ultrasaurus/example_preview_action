@@ -24,7 +24,7 @@ class NotesController < ApplicationController
   # GET /notes/new
   # GET /notes/new.xml
   def new
-    @note = Note.new
+    @note = Note.new(params[:note])
 
     respond_to do |format|
       format.html # new.html.erb
